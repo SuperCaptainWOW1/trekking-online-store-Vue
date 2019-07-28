@@ -1,0 +1,126 @@
+{
+  "men": [
+    {
+      "id": 0,
+      "name": "t-shirt",
+      "price": "5,00€",
+      "optionals": {
+        "sizes": ["XS", "S", "M", "L", "XL"],
+        "colors": ["blue", "yellow", "black"]
+      },
+      "image": "./images/t-shirt.png"
+    },
+    {
+      "id": 1,
+      "name": "pants forclaz",
+      "price": "30,00€",
+      "optionals": {
+        "sizes": ["S", "M", "XL"],
+        "colors": false
+      },
+      "image": "./images/pants-forclaz.png"
+    },
+    {
+      "id": 2,
+      "name": "backpack",
+      "price": "60,00€",
+      "optionals": {
+        "volumes": ["10"],
+        "colors": false
+      },
+      "image": "./images/backpack.png"
+    },
+    {
+      "id": 3,
+      "name": "t-shirt",
+      "price": "5,00€",
+      "optionals": {
+        "sizes": ["XS", "S", "M", "L", "XL"],
+        "colors": ["blue", "yellow", "black"]
+      },
+      "image": "./images/t-shirt.png"
+    },
+    {
+      "id": 4,
+      "name": "pants forclaz",
+      "price": "30,00€",
+      "optionals": {
+        "sizes": ["S", "M", "XL"],
+        "colors": false
+      },
+      "image": "./images/pants-forclaz.png"
+    },
+    {
+      "id": 5,
+      "name": "backpack",
+      "price": "60,00€",
+      "optionals": {
+        "volumes": ["10"],
+        "colors": false
+      },
+      "image": "./images/backpack.png"
+    },
+    {
+      "id": 6,
+      "name": "t-shirt",
+      "price": "5,00€",
+      "optionals": {
+        "sizes": ["XS", "S", "M", "L", "XL"],
+        "colors": ["blue", "yellow", "black"]
+      },
+      "image": "./images/t-shirt.png"
+    },
+    {
+      "id": 7,
+      "name": "pants forclaz",
+      "price": "30,00€",
+      "optionals": {
+        "sizes": ["S", "M", "XL"],
+        "colors": false
+      },
+      "image": "./images/pants-forclaz.png"
+    },
+    {
+      "id": 8,
+      "name": "backpack",
+      "price": "60,00€",
+      "optionals": {
+        "volumes": ["10"],
+        "colors": false
+      },
+      "image": "./images/backpack.png"
+    }
+  ],
+  "women": [
+    {
+      "id": 0,
+      "name": "jacket",
+      "price": "60,00€",
+      "optionals": {
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": false
+      },
+      "image": "./images/jacket.png"
+    },
+    {
+      "id": 1,
+      "name": "trekking shoes",
+      "price": "80,00€",
+      "optionals": {
+        "sizes": ["S", "L", "M"],
+        "colors": false
+      },
+      "image": "./images/trekking-shoes.png"
+    },
+    {
+      "id": 2,
+      "name": "t-shirt",
+      "price": "20,00€",
+      "optionals": {
+        "sizes": ["XS", "S", "L", "XL"],
+        "colors": ["pink", "white"]
+      },
+      "image": "./images/t-shirt_women.png"
+    }
+  ]
+}
