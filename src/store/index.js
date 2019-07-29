@@ -17,7 +17,6 @@ export default new Vuex.Store({
       if (state[`storeItems${sectionPascal}`]) {
         return state[`storeItems${sectionPascal}`];
       } else {
-        console.warn("The specified section name doesn't exist in database");
         return [];
       }
     },
@@ -26,11 +25,9 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    async fetchStoreItems({ commit }, { collection, limit }) {
+    async fetchStoreItems({ commit }, { collection, limit, page }) {
       const response = await fetch(
-        `http://localhost:3000/${collection}${
-          limit !== undefined ? "?_limit=" + limit : ""
-        }`
+        `http://localhost:3000/${collection}?_page=${page}&_limit=${limit}`
       );
       const data = await response.json();
 

@@ -10,7 +10,7 @@
           <div class="slider-controls__counter">
             <span class="current">{{ sliderCurrentPage }}</span>
             <span class="separator">/</span>
-            <span class="total">{{ sliderTotalPages }}</span>
+            <span class="total">3</span>
           </div>
           <div class="slider-controls__arrows">
             <i class="fas fa-angle-left" @click="sliderLeft"></i>
@@ -49,15 +49,29 @@ export default {
     };
   },
   created() {
-    this.fetchStoreItems({ collection: this.sectionName, limit: 3 });
+    this.fetchStoreItems({ collection: this.sectionName, page: 1, limit: 3 });
   },
   methods: {
     ...mapActions(["fetchStoreItems"]),
     sliderLeft() {
-      this.sliderCurrentPage -= 1;
+      if (this.sliderCurrentPage > 1) {
+        this.sliderCurrentPage -= 1;
+        this.fetchStoreItems({
+          collection: this.sectionName,
+          page: this.sliderCurrentPage,
+          limit: 3
+        });
+      }
     },
     sliderRight() {
-      this.sliderCurrentPage += 1;
+      if (this.sliderCurrentPage < 3) {
+        this.sliderCurrentPage += 1;
+        this.fetchStoreItems({
+          collection: this.sectionName,
+          page: this.sliderCurrentPage,
+          limit: 3
+        });
+      }
     }
   },
   computed: {
@@ -89,9 +103,6 @@ export default {
     storeItems() {
       // Check if getter with this section name exists
       return this.$store.getters.getStoreItems(this.sectionName);
-    },
-    sliderTotalPages() {
-      return Math.ceil(this.storeItems.length / 3);
     }
   },
   components: {
