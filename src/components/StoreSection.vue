@@ -19,5 +19,6 @@ export default {
 #products {
   background-color: #fff;
   min-height: 100px;
+  padding-bottom: 5rem;
 }
 </style>

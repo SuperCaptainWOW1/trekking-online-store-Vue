@@ -129,8 +129,9 @@ export default {
 
 .section-name {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 700;
   flex-grow: 0;
+  color: #424242;
 }
 
 hr {
@@ -138,12 +139,6 @@ hr {
   color: #ccc;
   flex-grow: 1;
   margin-top: 1.3rem;
-}
-
-.slider:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .slider-items {
@@ -163,6 +158,7 @@ hr {
   width: 2rem;
   display: flex;
   justify-content: space-between;
+  font-weight: 500;
 }
 
 .slider-controls__arrows {

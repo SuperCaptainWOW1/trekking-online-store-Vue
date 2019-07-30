@@ -118,7 +118,7 @@ export default {
   background-color: #f5f6f7;
   padding: 1.2rem;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .slider-items__item:not([class~="active"]):hover {

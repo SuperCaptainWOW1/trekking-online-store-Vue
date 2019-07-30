@@ -1,7 +1,7 @@
 <template>
   <header id="home">
     <div class="container">
-      <nav class="top-header d-flex justify-content-between">
+      <nav class="top-header d-flex justify-content-between align-items-center">
         <a href="#home " class="logo">
           <img src="../assets/logo.png" alt />
         </a>
@@ -69,6 +69,7 @@ a:not([class="logo"]):hover {
 .menu {
   list-style: none;
   width: 17rem;
+  margin: 0;
 }
 
 .menu a {
@@ -87,11 +88,13 @@ a:not([class="logo"]):hover {
 
 .header-text h1 {
   font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
 }
 
 .header-text p {
-  font-weight: 200;
-  max-width: 38rem;
+  font-weight: 300;
+  max-width: 40rem;
   margin: 0 auto;
   font-size: 1.4em;
   opacity: 0.9;
@@ -105,9 +108,18 @@ a:not([class="logo"]):hover {
   transition: 0.2s;
 }
 
+@media (max-width: 576px) {
+  .menu {
+    width: 23rem;
+  }
+  .menu a {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-height: 400px) {
   .container {
-    height: 400px;
+    height: 500px;
   }
 }
 </style>

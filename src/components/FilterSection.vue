@@ -84,7 +84,7 @@ button:hover {
   margin-left: 0.5em;
   margin-bottom: 0;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 input[type="checkbox"] {
