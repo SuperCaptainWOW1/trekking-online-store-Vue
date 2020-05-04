@@ -28,7 +28,7 @@
 
 <script>
 import StoreSubSectionItem from "./StoreSubSectionItem";
-import { mapActions, mapGetters } from "vuex";
+import { mapActions } from "vuex";
 
 export default {
   props: {
