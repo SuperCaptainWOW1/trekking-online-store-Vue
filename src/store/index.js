@@ -3,6 +3,8 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+const API_URI = process.env.API_URI || 'http://localhost:3000';
+
 export default new Vuex.Store({
   state: {
     storeItemsMen: [],
@@ -27,7 +29,7 @@ export default new Vuex.Store({
   actions: {
     async fetchStoreItems({ commit }, { collection, limit, page }) {
       const response = await fetch(
-        `http://localhost:3000/${collection}?_page=${page}&_limit=${limit}`
+        `${API_URI}/${collection}?_page=${page}&_limit=${limit}`
       );
       const data = await response.json();
 
