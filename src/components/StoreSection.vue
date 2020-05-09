@@ -1,7 +1,11 @@
 <template>
   <section id="products">
-    <StoreSubSection side="left" sectionName="men" />
-    <StoreSubSection side="right" sectionName="women" />
+    <div v-if="!emptySection">
+      <StoreSubSection side="left" sectionName="men" />
+      <StoreSubSection side="right" sectionName="women" />
+    </div>
+
+    <h2 v-else>Sorry, we couldn't find any products.</h2>
   </section>
 </template>
 
@@ -9,6 +13,15 @@
 import StoreSubSection from "./StoreSubSection";
 
 export default {
+  name: 'StoreSection',
+  computed: {
+    emptySection() {
+      const activeSections = this.$store.getters.getActiveSections;
+      const activeSectionsArray = Array.from(activeSections);
+
+      return activeSectionsArray.length === 1 && activeSectionsArray.includes('children');
+    }
+  },
   components: {
     StoreSubSection
   }

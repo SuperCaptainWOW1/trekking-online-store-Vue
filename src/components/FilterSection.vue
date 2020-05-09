@@ -2,35 +2,9 @@
   <section id="filter">
     <div class="container d-flex justify-content-between">
       <div class="filter-controls">
-        <div class="filter-controls__item">
-          <input id="filter_men" type="checkbox" value="men" />
-          <label for="filter_men" class="checkbox-label d-flex align-items-center">
-            <span class="checkbox-icon">
-              <i class="fas fa-check"></i>
-            </span>
-            <span class="checkbox-label__text ml-2">men</span>
-          </label>
-        </div>
-
-        <div class="filter-controls__item">
-          <input id="filter_women" type="checkbox" value="women" />
-          <label for="filter_women" class="checkbox-label d-flex align-items-center">
-            <span class="checkbox-icon">
-              <i class="fas fa-check"></i>
-            </span>
-            <span class="checkbox-label__text ml-2">women</span>
-          </label>
-        </div>
-
-        <div class="filter-controls__item">
-          <input id="filter_children" type="checkbox" value="children" />
-          <label for="filter_children" class="checkbox-label d-flex align-items-center">
-            <span class="checkbox-icon">
-              <i class="fas fa-check"></i>
-            </span>
-            <span class="checkbox-label__text ml-2">children</span>
-          </label>
-        </div>
+        <FilterSectionControlsItem title="men" />
+        <FilterSectionControlsItem title="women" />
+        <FilterSectionControlsItem title="children" />
       </div>
       <div class="filter-button__show-all">
         <button>See all products</button>
@@ -40,10 +14,17 @@
 </template>
 
 <script>
-export default {};
+import FilterSectionControlsItem from './FilterSectionControlsItem'
+
+export default {
+  name: 'FilterSection',
+  components: {
+    FilterSectionControlsItem
+  }
+};
 </script>
 
-<style scoped>
+<style>
 #filter {
   background-color: #f5f6f7;
   display: flex;

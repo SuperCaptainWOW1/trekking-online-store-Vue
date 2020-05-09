@@ -3,13 +3,14 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-const API_URI = process.env.API_URI || 'http://localhost:3000';
+const API_URI = process.env.API_URI || 'http://localhost:5000';
 
 export default new Vuex.Store({
   state: {
     storeItemsMen: [],
     storeItemsWomen: [],
-    activeStoreItem: false
+    activeStoreItem: false,
+    activeSections: []
   },
   getters: {
     // Get store items of specified section
@@ -24,6 +25,9 @@ export default new Vuex.Store({
     },
     getActiveStoreItem(state) {
       return state.activeStoreItem;
+    },
+    getActiveSections(state) {
+      return state.activeSections;
     }
   },
   actions: {
@@ -40,6 +44,9 @@ export default new Vuex.Store({
     },
     setActiveStoreItem({ commit }, item) {
       commit("SET_ACTIVE_STORE_ITEM", item);
+    },
+    toggleActiveSection({ commit }, title) {
+      commit('TOGGLE_ACTIVE_SECTION', title);
     }
   },
   mutations: {
@@ -50,6 +57,13 @@ export default new Vuex.Store({
     },
     SET_ACTIVE_STORE_ITEM(state, payload) {
       state.activeStoreItem = payload;
+    },
+    TOGGLE_ACTIVE_SECTION(state, title) {
+      if (state.activeSections.includes(title)) {
+        state.activeSections.splice(state.activeSections.indexOf(title), 1);
+      } else {
+        state.activeSections.push(title);
+      }
     }
   }
 });

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" v-if="showSection">
     <div class="section-header" :class="sideClass">
       <span class="section-name" :style="namePaddingDirection">{{ sectionNameUp }}</span>
       <hr />
@@ -103,6 +103,12 @@ export default {
     storeItems() {
       // Check if getter with this section name exists
       return this.$store.getters.getStoreItems(this.sectionName);
+    },
+    showSection() {
+      const activeSections = this.$store.getters.getActiveSections;
+      const activeSectionsArray = Array.from(activeSections);
+
+      return activeSectionsArray.includes(this.sectionName) || activeSectionsArray.length === 0;
     }
   },
   components: {
