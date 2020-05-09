@@ -47,6 +47,9 @@ export default new Vuex.Store({
     },
     toggleActiveSection({ commit }, title) {
       commit('TOGGLE_ACTIVE_SECTION', title);
+    },
+    clearActiveSections({ commit }) {
+      commit('CLEAR_ACTIVE_SECTIONS');
     }
   },
   mutations: {
@@ -64,6 +67,9 @@ export default new Vuex.Store({
       } else {
         state.activeSections.push(title);
       }
+    },
+    CLEAR_ACTIVE_SECTIONS(state) {
+      state.activeSections = [];
     }
   }
 });

@@ -7,7 +7,7 @@
         <FilterSectionControlsItem title="children" />
       </div>
       <div class="filter-button__show-all">
-        <button>See all products</button>
+        <button @click="$store.dispatch('clearActiveSections')">See all products</button>
       </div>
     </div>
   </section>
