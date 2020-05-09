@@ -34,4 +34,9 @@ export default {
   min-height: 100px;
   padding-bottom: 5rem;
 }
+
+h2 {
+  text-align: center;
+  margin-top: 5rem;
+}
 </style>
