@@ -13,7 +13,7 @@
     "core-js": "^2.6.5",
     "eslint-utils": "^2.0.0",
     "kind-of": "^6.0.3",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "serialize-javascript": "^3.0.0",
     "vue": "^2.6.10",
     "vue-smooth-scroll": "^1.0.13",
